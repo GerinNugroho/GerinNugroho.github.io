@@ -3,22 +3,23 @@ const form = document.forms['Form-Comment'];
 const Name = document.getElementById('Name');
 const Comment = document.getElementById('Comment');
 const button = document.querySelector('.btn-send');
+const buttonDis = document.querySelector('.disabled');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  button.innerHTML = `Wait...`;
-  button.classList.add('disabled');
+  button.style.display = 'none';
+  buttonDis.style.display = 'block';
   fetch(scriptURL, { method: 'POST', body: new FormData(form) })
     .then((response) => {
       form.reset();
-      button.classList.remove('disabled');
-      button.innerHTML = `<i class="bi bi-send-fill"></i>Send`;
+      button.style.display = 'block';
+      buttonDis.style.display = 'none';
       alert('Sending Success!');
     })
     .catch((error) => {
       form.reset();
-      button.classList.remove('disabled');
-      button.innerHTML = `<i class="bi bi-send-fill"></i>Send`;
+      button.style.display = 'block';
+      buttonDis.style.display = 'none';
       alert('Sending Failed');
     });
 });
