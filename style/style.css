@@ -193,6 +193,10 @@ h3 {
   border-top-left-radius: 0.6rem;
 }
 
+.image-wrapper {
+  overflow: hidden;
+}
+
 .image-wrapper .image {
   width: 60.35rem;
   height: 30rem;
@@ -202,16 +206,9 @@ h3 {
   justify-content: center;
   align-items: center;
   background-color: white;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   border-top-right-radius: 0.6rem;
   border-bottom-right-radius: 0.6rem;
   border-bottom-left-radius: 0.6rem;
-}
-
-.Pokemon {
-  background: url('/assets/Pokemon.png');
 }
 
 .image-wrapper .interact {

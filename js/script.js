@@ -1,3 +1,5 @@
+import listProject from './listProject.json' with { type: 'json' };
+
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxEgFQLi5gP2jbh-snwzErAtg56UZshgVOybCvTamC2GeOLTwijZeWWr6GWC0oV5uuu/exec';
 const form = document.forms['Form-Comment'];
 const Name = document.getElementById('Name');
@@ -23,3 +25,27 @@ form.addEventListener('submit', (e) => {
       alert('Sending Failed');
     });
 });
+
+const loadElement = () => {
+  const projectitems = document.getElementById('project-items');
+  listProject.forEach((list) => {
+    const projectitem = document.createElement('div');
+    projectitem.className = 'project-item';
+    projectitem.innerHTML = `
+    <div class="tooltip-project">
+        <span class="name-project">${list.Names}</span>
+     </div>
+     <div class="image-wrapper">
+        <div class="image" style="background: url('assets/${list.Image}'); background-size: cover; background-repeat: no-repeat; background-position: center;"></div>
+          <div class="interact">
+            <a href="${list.Links}" target="_blank">
+                <i class="bi bi-eye"></i>
+            </a>
+          </div>
+       </div>
+    `;
+    projectitems.appendChild(projectitem);
+  });
+};
+
+window.addEventListener('load', loadElement);
