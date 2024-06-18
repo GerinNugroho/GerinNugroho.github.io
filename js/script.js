@@ -73,20 +73,3 @@ const loadElement = () => {
 };
 
 window.addEventListener('load', loadElement);
-
-// const projectitem = document.createElement('div');
-// projectitem.className = 'project-item';
-// projectitem.innerHTML = `
-// <div class="tooltip-project">
-//     <span class="name-project">${list.Names}</span>
-//  </div>
-//  <div class="image-wrapper">
-//     <div class="image" style="background: url('assets/${list.Image}'); background-size: cover; background-repeat: no-repeat; background-position: center;"></div>
-//       <div class="interact">
-//         <a href="${list.Links}" target="_blank">
-//             <i class="bi bi-eye"></i>
-//         </a>
-//       </div>
-//    </div>
-// `;
-// projectitems.appendChild(projectitem);
