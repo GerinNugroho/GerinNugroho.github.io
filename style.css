@@ -1,0 +1,58 @@
+.jumbotron .img-thumbnail {
+  margin: 50px 0 25px;
+}
+.jumbotron .lead {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: poppins;
+}
+.jumbotron .auto-typed {
+  font-size: 18px;
+  font-family: roboto;
+  font-weight: 300;
+}
+.jumbotron .links {
+  font-family: roboto;
+  font-size: 12px;
+  font-weight: 300;
+  font-style: italic;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.jumbotron .links a {
+  text-decoration: none;
+}
+.jumbotron .links span {
+  font-size: 20px;
+}
+.jumbotron a p {
+  font-weight: bold;
+  font-size: 12px;
+}
+.jumbotron a p span {
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid black;
+  position: relative;
+}
+.jumbotron a p span:hover {
+  color: #f9f9f9;
+}
+.jumbotron a p span::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 20px;
+  background: #363636;
+  transition: 0.2s width linear;
+  z-index: -1;
+}
+.jumbotron a p span:hover::after {
+  content: '';
+  width: 100%;
+}
