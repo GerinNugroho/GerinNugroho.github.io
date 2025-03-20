@@ -56,3 +56,56 @@
   content: '';
   width: 100%;
 }
+
+.projects {
+  margin-top: 50px;
+}
+
+.projects .row .col {
+  display: flex;
+  padding: 25px 0px 25px 50px;
+}
+.projects .row .ganjil {
+  background-color: #c4c4c4;
+}
+.projects .row .genap {
+  background-color: white;
+}
+
+.projects .col p {
+  margin: 0;
+  font-family: poppins;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.projects .col a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+.projects .title {
+  position: relative;
+  margin-bottom: 15px;
+}
+.projects .title::after {
+  content: '';
+  background: black;
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 40%;
+  height: 5px;
+  border-radius: 20px;
+}
+.projects .title h2{
+  font-family: poppins;
+  font-size: 35px;
+  letter-spacing: 5px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
